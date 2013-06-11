@@ -1,0 +1,34 @@
+<html>
+    
+    <title>How to delete the Trash folder on USB drives in Linux Machines?</title>
+    
+    <body>
+        <p>Generally, On linux systems, When a folder or a file is
+        deleted from a USB drive, then it is moved to the Trash folder.
+        This is not moved completely out of the memory. Moreover, due
+        to this, what happens is that even the empty space can't be taken up by
+        other files.<br /> <br /> So to avoid this, we must delete the trash folder.
+        
+        <br />This is like clearing the Recycle Bin on Windows Machine.
+        <br /> We will do th following after we open the USB drive in a terminal:
+        
+        <code><pre>
+            git init
+            git status
+            
+            #Now you knwo the name of the Trash folder. (Some thing like .Trah-1000)
+            
+            rm -rf NameOfTrashFolder
+        </pre></code>
+        
+        With this command, The files inside the folder will be deleted one-by-one and
+        finally the folder itself will be deleted.
+        
+        </p>
+        
+        <div>
+            <p> <b><u>Created by Siddharth Kannan</u></b></p>
+        </div>
+    </body>
+    
+</html>
