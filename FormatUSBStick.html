@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title>Formatting a USB drive</title>
+</head>
+<body>
+    
+    <P>You can format a drive easily from the terminal:<br/>
+    
+    <code>sudo mkfs -t vfat -I /dev/sd##</code><br/>
+    
+    This is format it to FAT 32.<br/>
+    
+    <a href="http://ubuntuforums.org/showthread.php?t=1242017"> For more details, Refer here.</a><br/>
+    
+    to get the sd?? thing for your drive you can simply do:<br/>
+    
+    <code>df -h</code><br/>
+    
+    About changing the labels(That is the name of the USB drive):<br/>
+    
+    <a href="https://help.ubuntu.com/community/RenameUSBDrive">Ubuntu Documentation</a><br/>
+       
+    I will not explain the whole process(its not that big) here. It is quite clearly given in the documentation.<br/>
+    
+    Basically these are the steps:<br/>
+    
+        1. Install the labeling program<br/>
+        2. Unmount the device<br/>
+        3. check the current label<br/>
+        4. change the label<br/>
+        5. mount it again to check if the present label has been effected.<br/>
+        
+    Each step is clearly explained in the documentation. SO i think it would be unnecessary to go through all of it again.<br/>
+    
+    for FAT partitions, the list of commands is:<br/>
+    
+        <code>
+            sudo mlabel -i /device -s ::  #to check the label<br/>
+            
+            sudo mlabel -i /device ::NewLabel #to add the new label<br/>
+            
+        </code>
+        
+        
+    </P>
+    
+    
+</body>
+</html>
